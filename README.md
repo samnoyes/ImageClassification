@@ -1,7 +1,7 @@
 # ImageClassification
 
 ## About
-This image classification tool uses HuggingFace with a ResNeXt model to perform image classification.
+This image classification tool uses HuggingFace with a [ResNeXt model](https://pytorch.org/hub/facebookresearch_WSL-Images_resnext/) to perform image classification.
 
 ## Installation
 
@@ -32,3 +32,7 @@ tiger 5.202060492592864e-05
 leopard 3.0612063710577786e-05
 cheetah 2.1639469196088612e-05
 ~~~
+
+## Credit
+
+Followed a tutorial from the HuggingFace docs here: https://huggingface.co/docs/timm/models/resnext
