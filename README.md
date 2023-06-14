@@ -1,7 +1,7 @@
 # ImageClassification
 
 ## About
-This image classification tool uses HuggingFace with a [ResNeXt model](https://pytorch.org/hub/facebookresearch_WSL-Images_resnext/) to perform image classification.
+This image classification tool uses HuggingFace's [timm library](https://huggingface.co/docs/timm/index) with a [ResNeXt model](https://pytorch.org/hub/facebookresearch_WSL-Images_resnext/) to perform image classification.
 
 ## Installation
 
