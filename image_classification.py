@@ -17,7 +17,7 @@ urllib.request.install_opener(opener)
 # Load and preprocess the image
 config = resolve_data_config({}, model=model)
 transform = create_transform(**config)
-url, filename = ("https://a-z-animals.com/media/animals/images/original/lion7.jpg", "images/lion7.jpg")
+url, filename = ("https://a-z-animals.com/media/animals/images/original/lion7.jpg", "images/lion7.jpg") # Edit this line to the image you would like to classify
 urllib.request.urlretrieve(url, filename)
 img = Image.open(filename).convert('RGB')
 tensor = transform(img).unsqueeze(0) # transform and add batch dimension
