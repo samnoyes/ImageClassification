@@ -3,6 +3,8 @@
 ## About
 This image classification tool uses HuggingFace's [timm library](https://huggingface.co/docs/timm/index) with a [ResNeXt model](https://pytorch.org/hub/facebookresearch_WSL-Images_resnext/) to perform image classification.
 
+[Click here to view the list of ImageNet class mappings](https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt) to see what this model can classify.
+
 ## Installation
 
 1. Ensure you have Python installed
@@ -19,12 +21,13 @@ This will install the necessary packages.
 
 ## Usage
 
-1. Find an image you would like to classify, and edit image_classification.py with the URL of your image (code comments show where to edit)
+1. Find an image you would like to classify, and pass the URL as a string argument when you run the script.
 
-2. `python3 image_classification.py` (or `python3` depending on your version)
+2. `python image_classification.py "<image url>"` (or `python3` depending on your version)
 
 ### Sample Output:
 
+Input: `python image_classification.py "https://a-z-animals.com/media/animals/images/original/lion7.jpg"`
 ~~~
 lion 0.9996147155761719
 chow 0.000105000362964347
@@ -35,4 +38,4 @@ cheetah 2.1639469196088612e-05
 
 ## Credit
 
-Followed a tutorial from the HuggingFace docs here: https://huggingface.co/docs/timm/models/resnext
+Got a lot of help from the HuggingFace docs: https://huggingface.co/docs/timm/models/resnext

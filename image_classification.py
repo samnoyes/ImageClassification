@@ -4,6 +4,12 @@ from timm.data import resolve_data_config
 from timm.data.transforms_factory import create_transform
 import torch
 import urllib
+import sys
+
+# Check if an argument is passed
+if len(sys.argv) < 2:
+    print("Error: No command-line argument passed.")
+    sys.exit(1)
 
 # Create model
 model = timm.create_model('resnext101_32x8d', pretrained=True)
@@ -17,7 +23,7 @@ urllib.request.install_opener(opener)
 # Load and preprocess the image
 config = resolve_data_config({}, model=model)
 transform = create_transform(**config)
-url, filename = ("https://a-z-animals.com/media/animals/images/original/lion7.jpg", "images/lion7.jpg") # Edit this line to the image you would like to classify
+url, filename = (sys.argv[1], "images/image.jpg")
 urllib.request.urlretrieve(url, filename)
 img = Image.open(filename).convert('RGB')
 tensor = transform(img).unsqueeze(0) # transform and add batch dimension
