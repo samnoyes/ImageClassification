@@ -21,9 +21,9 @@ This will install the necessary packages.
 
 ## Usage
 
-1. Find an image you would like to classify, and pass the URL as a string argument when you run the script.
+Find an image you would like to classify, and pass the URL as a string argument when you run the script:
 
-2. `python image_classification.py "<image url>"` (or `python3` depending on your version)
+`python image_classification.py "<image url>"` (or `python3` depending on your version)
 
 ### Sample Output:
 
